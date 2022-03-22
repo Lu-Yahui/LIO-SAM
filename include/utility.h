@@ -5,7 +5,6 @@
 
 #include <nav_msgs/Odometry.h>
 #include <nav_msgs/Path.h>
-#include <opencv/cv.h>
 #include <pcl/common/common.h>
 #include <pcl/common/transforms.h>
 #include <pcl/filters/crop_box.h>
@@ -30,6 +29,10 @@
 #include <tf/transform_listener.h>
 #include <visualization_msgs/Marker.h>
 #include <visualization_msgs/MarkerArray.h>
+
+// clang-format off
+#include <opencv2/opencv.hpp>
+// clang-format on
 
 #include <algorithm>
 #include <array>

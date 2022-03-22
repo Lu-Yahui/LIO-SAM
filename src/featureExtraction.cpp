@@ -2,7 +2,9 @@
 #include "utility.h"
 
 struct smoothness_t {
+  // curvature
   float value;
+  // index of point
   size_t ind;
 };
 
@@ -27,9 +29,12 @@ class FeatureExtraction : public ParamServer {
   lio_sam::cloud_info cloudInfo;
   std_msgs::Header cloudHeader;
 
+  // curvature list of points
   std::vector<smoothness_t> cloudSmoothness;
   float *cloudCurvature;
+  // classification, 1-occlustion/parallel, or processed; 0-not processed
   int *cloudNeighborPicked;
+  // label, 1-corner, 2-surface
   int *cloudLabel;
 
   FeatureExtraction() {
